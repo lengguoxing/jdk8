@@ -1,5 +1,8 @@
 package com.lgx.jdk8.part01;
 
+/**
+ * JDK8中FunctionalInterface的作用及意义
+ */
 @FunctionalInterface
 public interface Test3MyInterface {
     void test();

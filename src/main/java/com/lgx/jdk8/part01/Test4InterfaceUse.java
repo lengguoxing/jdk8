@@ -1,5 +1,8 @@
 package com.lgx.jdk8.part01;
 
+/**
+ * JDK8中FunctionalInterface注解的使用
+ */
 public class Test4InterfaceUse {
     public void myTest(Test4MyInterface myInterface){
         System.out.println("==begin");

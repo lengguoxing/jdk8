@@ -1,7 +1,9 @@
 package com.lgx.jdk8.part01;
 
 
-
+/**
+ * JDK8中lambda的理解
+ */
 public class Test5Context {
     public static void main(String[] args) {
         //() -> {};

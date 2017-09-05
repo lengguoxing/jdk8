@@ -4,6 +4,10 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * JDK8的初体验
+ * Created by Administrator on 2017/9/1.
+ */
 public class Test1Swing {
     //输入psvm会自动提示
     public static void main(String[] args) {
@@ -31,7 +35,9 @@ public class Test1Swing {
 
         //方法体多行
         jButton2.addActionListener(event -> {
+            System.out.println("start");
             System.out.println("Button2 Pressed e = [" + event + "]");
+            System.out.println("end");
         });
 
         //jFrame.add(jButton1);

@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * JDK8中集合的遍历及流的初体验
+ */
 public class Test6List {
     public static void main(String[] args) {
         //下面一个小例子，是将list里面每个元素的字母变成大写，然后输出

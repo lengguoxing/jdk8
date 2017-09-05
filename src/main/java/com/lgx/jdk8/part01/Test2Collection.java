@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
+/**
+ * JDK8集合遍历的使用
+ */
 public class Test2Collection {
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6);
@@ -38,5 +41,8 @@ public class Test2Collection {
 
         //还可以这样，通过函数的方法引用
         list.forEach(System.out::println);
+
+
+
     }
 }
