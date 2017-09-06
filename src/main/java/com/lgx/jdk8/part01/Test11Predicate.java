@@ -32,7 +32,7 @@ public class Test11Predicate {
         boolean b = test.isEqual("helloworld").test("helloworld");   //判断2个参数是否相等的
         System.out.println("b = [" + b + "]");
         boolean b2 = test.isEqual2(new Date()).test(new Date());   //判断2个参数是否相等的
-        System.out.println("b2 = [" + b2 + "]");  //张龙老是的电脑运行是false，我的是true???
+        System.out.println("b2 = [" + b2 + "]");  //张龙老师的电脑运行是false，我的是true???
 
     }
 
