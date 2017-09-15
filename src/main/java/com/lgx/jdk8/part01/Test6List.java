@@ -11,7 +11,7 @@ public class Test6List {
     public static void main(String[] args) {
         //下面一个小例子，是将list里面每个元素的字母变成大写，然后输出
         List<String> list = Arrays.asList("hello", "world", "hello world");
-        //传统方法就是遍历，然后lowCase,然后输出
+        //传统方法就是遍历，然后UpperCase,然后输出
 
         //jdk8的写法
         list.forEach(item -> {
@@ -24,7 +24,7 @@ public class Test6List {
             list2.add(item.toUpperCase());
         });
         list2.forEach(item -> {
-            System.out.println("item2 = [" + item.toUpperCase() + "]");
+            System.out.println("item2 = [" + item + "]");
         });
 
         //以上的写法还不完全是JDK8的写法，更好的写法如下（采用流）：

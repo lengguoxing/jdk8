@@ -17,7 +17,7 @@ public class Test2Collection {
         }
         System.out.println("------------");
 
-        //JDK1.5开始出现
+        //JDK1.5开始出现增强for循环
         for (Integer i : list) {
             System.out.println("i = [" + i + "]");
         }
