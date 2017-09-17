@@ -7,8 +7,8 @@ import java.util.function.Function;
  * Function和BiFunction的使用
  */
 public class Test9Function {
-    //这个例子
     public static void main(String[] args) {
+        //这个例子讲解Function中compose和andThen的区别
         Test9Function test = new Test9Function();
 
         int result = test.functionCompose(10, value -> value * 2, value -> value * value);

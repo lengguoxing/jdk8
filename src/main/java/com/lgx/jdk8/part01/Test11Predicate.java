@@ -11,9 +11,7 @@ import java.util.function.Predicate;
 public class Test11Predicate {
     public static void main(String[] args) {
         Predicate<String> predicate = p -> p.length() > 5;
-
         System.out.println("helloworld = [" + predicate.test("helloworld") + "]");
-
 
         Test11Predicate test = new Test11Predicate();
         List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
@@ -40,8 +38,6 @@ public class Test11Predicate {
      * 函数式编程有区别之前的面相对象编程：
      * 1：面相对象传递是参数，方法里面做具体的处理
      * 2：函数式编程传递是行为，由调用者来决定怎么处理
-     * @param list
-     * @param predicate
      */
     public void conditionFilter(List<Integer> list, Predicate<Integer> predicate){
         for (Integer integer : list){

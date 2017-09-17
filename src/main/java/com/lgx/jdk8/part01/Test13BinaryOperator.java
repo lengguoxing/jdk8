@@ -4,9 +4,8 @@ import java.util.Comparator;
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
 
-
 /**
- * Created by Administrator on 2017/9/6.
+ * BinaryOperator的讲解
  */
 public class Test13BinaryOperator {
     public static void main(String[] args) {

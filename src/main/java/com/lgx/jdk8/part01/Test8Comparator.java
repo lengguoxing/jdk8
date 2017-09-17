@@ -26,7 +26,7 @@ public class Test8Comparator {
         });
         System.out.println("names2 = [" + names + "]");*/
 
-        //其实因为JVM会根据names里面都是String，推到除o1,o2的类型，所以可以省列
+        //其实因为JVM会根据names里面都是String类型，推断出o1,o2的类型，所以可以省列
         /*Collections.sort(names, (o1, o2) -> {
             return o2.compareTo(o1);//倒叙
         });

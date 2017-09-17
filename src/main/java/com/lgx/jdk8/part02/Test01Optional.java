@@ -7,7 +7,6 @@ import java.util.List;
 /**
  * Optional的使用
  */
-
 public class Test01Optional {
     public static void main(String[] args) {
         //传统方法不为空判断和调用

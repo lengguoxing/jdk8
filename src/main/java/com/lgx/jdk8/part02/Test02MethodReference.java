@@ -46,7 +46,7 @@ public class Test02MethodReference {
 
         //c、类名::实例方法名
         //与上面那个类似，Lambda表达式传递进来的第一个参数作为当前对象，当作调用者，
-        // 第二及以后的参数才传递给被调用的方法
+        //第二及以后的参数才传递给被调用的方法
         /*studentList.sort(Student::compareByScore);
         studentList.forEach(student -> System.out.println("student = [" + student.getScore() + "]"));
         studentList.sort(Student::compareByName);

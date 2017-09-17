@@ -49,7 +49,6 @@ public class Test10Stream {
         BiFunction<Integer, List<Person>, List<Person>> biFunction2 = (ageOfPerson, personList) ->
               personList.stream().filter(person -> person.getAge() >= ageOfPerson).collect(Collectors.toList());
 
-
         //再应用bifunction
         return biFunction2.apply(age, persons);
     }
@@ -60,11 +59,7 @@ public class Test10Stream {
         return biFunction.apply(age, persons);
     }
 
-
-
 }
-
-
 
 class Person{
     private String name;
