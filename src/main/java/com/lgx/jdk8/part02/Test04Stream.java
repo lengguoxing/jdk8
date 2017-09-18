@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
- * Stream的介绍
+ * Stream的使用介绍
  */
 public class Test04Stream {
     public static void main(String[] args) {
@@ -105,7 +105,24 @@ public class Test04Stream {
         //iterate方法使用
         Stream.iterate(1, item -> item + 2).limit(10).forEach(System.out::println);
 
+        //找出上面那个流中大于2的元素，然后将每个元素乘以3，然后忽略掉前4个元素，然后再取出流中的前5个元素，最后求出流中元素的总和
+        //mapToInt是map的一个具化，省去类型转换，skip标示忽略掉前几个元素，limit是取几个元素
+        Stream<Integer> stream7 = Stream.iterate(1, item -> item + 2).limit(10);
+        /*int sum = stream7.filter(item -> item > 2).mapToInt(item -> item * 3).skip(4).limit(5).sum();
+        System.out.println("sum=" + sum);*/
+
+        //如果是求最大值
+        /*OptionalInt max = stream7.filter(item -> item > 2).mapToInt(item -> item * 3).skip(4).limit(5).max();
+        max.ifPresent(System.out::print);*/
+
+        //如果我们又想求总和，或者最大值，最小值，平均值，个数之类的应该怎么写呢
+        //summaryStatistics是总结统计的，是一个终止操作
+        IntSummaryStatistics intSummaryStatistics = stream7.filter(item -> item > 2).mapToInt(item -> item * 3).skip(4).limit(5).summaryStatistics();
+        System.out.println("sum = [" + intSummaryStatistics.getSum() + "]");
+        System.out.println("max = [" + intSummaryStatistics.getMax() + "]");
+        System.out.println("min = [" + intSummaryStatistics.getMin() + "]");
+        System.out.println("ave = [" + intSummaryStatistics.getAverage() + "]");
+        System.out.println("count = [" + intSummaryStatistics.getCount() + "]");
 
     }
-
 }
