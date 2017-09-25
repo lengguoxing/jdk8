@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
  * JDK8的初体验
  * Created by Administrator on 2017/9/1.
  */
-public class Test1Swing {
+public class Test01Swing {
     //输入psvm会自动提示
     public static void main(String[] args) {
         //输入soutp会自动提示

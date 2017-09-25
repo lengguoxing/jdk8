@@ -4,7 +4,7 @@ package com.lgx.jdk8.part01;
  * JDK8中FunctionalInterface的作用及意义
  */
 @FunctionalInterface
-public interface Test3MyInterface {
+public interface Test03MyInterface {
     void test();
 
     //会报错，因为函数式接口只能有一个抽象方法

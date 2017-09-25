@@ -3,17 +3,17 @@ package com.lgx.jdk8.part01;
 /**
  * JDK8中FunctionalInterface注解的使用
  */
-public class Test4InterfaceUse {
-    public void myTest(Test4MyInterface myInterface){
+public class Test04InterfaceUse {
+    public void myTest(Test04MyInterface myInterface){
         System.out.println("==begin");
         myInterface.test();
         System.out.println("==end");
     }
 
     public static void main(String[] args) {
-        Test4InterfaceUse test = new Test4InterfaceUse();
+        Test04InterfaceUse test = new Test04InterfaceUse();
 
-        test.myTest(new Test4MyInterface() {
+        test.myTest(new Test04MyInterface() {
             @Override
             public void test() {
                 System.out.println("test");
@@ -28,7 +28,7 @@ public class Test4InterfaceUse {
         System.out.println("-------------");
 
         //上面的匿名内部类也等价于
-        Test4MyInterface myInterface = () -> {
+        Test04MyInterface myInterface = () -> {
             System.out.println("hello");
         };
         System.out.println(myInterface.getClass());
@@ -39,7 +39,7 @@ public class Test4InterfaceUse {
 }
 
 @FunctionalInterface
-interface Test4MyInterface {
+interface Test04MyInterface {
     void test();
 
     //会报错，因为函数式接口只能有一个抽象方法

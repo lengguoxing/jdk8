@@ -5,7 +5,7 @@ import java.util.function.Function;
 /**
  * JDK8中lambda的使用和行为的传递
  */
-public class Test7FunctionInterface {
+public class Test07FunctionInterface {
     public static void main(String[] args) {
         Function<String, String> function = String::toUpperCase;
         System.out.println("function = [" + function.getClass().getInterfaces().length + "]");
@@ -17,7 +17,7 @@ public class Test7FunctionInterface {
          * 但是我们可以通过方法引用直接调用；形式为 类::方法
          */
 
-        Test7FunctionInterface test7 = new Test7FunctionInterface();
+        Test07FunctionInterface test7 = new Test07FunctionInterface();
         //使用statement
         int result = test7.compute(10, value -> {return value * 2;});//这里的apply()执行的就是value * 2
         System.out.println("result = [" + result + "]");

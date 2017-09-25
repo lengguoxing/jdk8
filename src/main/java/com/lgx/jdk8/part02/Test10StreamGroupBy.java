@@ -37,6 +37,8 @@ public class Test10StreamGroupBy {
         Map<Boolean, List<User>> map4 = userList.stream().collect(Collectors.partitioningBy(user -> user.getScore() >= 60));
         System.out.println("map4 = " + map4);
 
+
+
     }
 }
 
@@ -66,5 +68,13 @@ class User{
     }
     public void setAge(int age) {
         this.age = age;
+    }
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", score=" + score +
+                ", age=" + age +
+                '}';
     }
 }

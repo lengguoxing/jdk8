@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * JDK8中运用lambda操作集合的排序
  */
-public class Test8Comparator {
+public class Test08Comparator {
     public static void main(String[] args) {
         //下面做一个排序的例子，来讲解Collection中的sort
         List<String> names = Arrays.asList("zhangsan", "lisi", "wangwu");

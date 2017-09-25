@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 /**
  * JDK8集合遍历的使用
  */
-public class Test2Collection {
+public class Test02Collection {
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6);
 

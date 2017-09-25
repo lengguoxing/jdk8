@@ -64,7 +64,7 @@ public class Test06LearnBySelf {
         String biResult = biFunction.apply("hello", "world");
         System.out.println("biResult = " + biResult);
 
-        /**BinaryOperator:接受两个参数返回一个值，functional method is apply(Object)**/
+        /**BinaryOperator(二元运算符):接受两个参数返回一个值（参数和返回值类型是一致的），functional method is apply(Object)**/
         BinaryOperator<Double> binaryOperator = (d1, d2) -> d1 + d2;
         double binaryResult = binaryOperator.apply(20.0, 30.0);
         System.out.println("binaryResult = " + binaryResult);

@@ -4,19 +4,19 @@ package com.lgx.jdk8.part01;
 /**
  * JDK8中lambda的理解
  */
-public class Test5Context {
+public class Test05Context {
     public static void main(String[] args) {
         //() -> {};
         // 这里都定义一种的lambda类型，但是单独这么写是报错的， 编译器无法识别，
         // 必须通过上下文来识别，这里的上下文，就是我们它前面定义的对象
 
-        Test5MyInterface interface1 = () -> {};
+        Test05MyInterface interface1 = () -> {};
         System.out.println(interface1.getClass().getInterfaces()[0]);
         System.out.println(interface1.getClass().getMethods()[0]);
 
         System.out.println("----------------");
 
-        Test5MyInterface2 interface2 = () -> {};
+        Test05MyInterface2 interface2 = () -> {};
         System.out.println(interface2.getClass().getInterfaces()[0]);
         System.out.println(interface2.getClass().getMethods()[0]);
 
@@ -39,13 +39,13 @@ public class Test5Context {
 }
 
 @FunctionalInterface
-interface Test5MyInterface {
+interface Test05MyInterface {
     void myMethod();
 
 }
 
 @FunctionalInterface
-interface Test5MyInterface2 {
+interface Test05MyInterface2 {
     void myMethod2();
 
 }

@@ -125,4 +125,5 @@ public class Test04Stream {
         System.out.println("count = [" + intSummaryStatistics.getCount() + "]");
 
     }
+
 }
