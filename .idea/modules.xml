@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/intellij_idea-jdk8.iml" filepath="$PROJECT_DIR$/.idea/modules/intellij_idea-jdk8.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/jdk8.iml" filepath="$PROJECT_DIR$/.idea/modules/jdk8.iml" />
     </modules>
   </component>
