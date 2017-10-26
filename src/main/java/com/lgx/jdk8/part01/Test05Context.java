@@ -8,7 +8,7 @@ public class Test05Context {
     public static void main(String[] args) {
         //() -> {};
         // 这里都定义一种的lambda类型，但是单独这么写是报错的， 编译器无法识别，
-        // 必须通过上下文来识别，这里的上下文，就是我们它前面定义的对象
+        // 必须通过上下文来识别，这里的上下文，就是写在它前面定义的对象
 
         Test05MyInterface interface1 = () -> {};
         System.out.println(interface1.getClass().getInterfaces()[0]);

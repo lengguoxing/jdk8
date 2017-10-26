@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 /**
- * Predicate的讲解，在上一个例子已经用到了
+ * Predicate的讲解
  */
 public class Test11Predicate {
     public static void main(String[] args) {

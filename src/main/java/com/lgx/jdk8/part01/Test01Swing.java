@@ -30,7 +30,7 @@ public class Test01Swing {
         //JDK1.8的写法
         jButton2.addActionListener(event -> System.out.println("Button2 Pressed e = [" + event + "]"));
 
-        //完整的写法,一般java编译器推断，但是也有情况推断不出来，就需要我们显式的写出来
+        //完整的写法,一般java编译器推断出类型，但是也有情况推断不出来的情况，就需要我们显式的写出来
         jButton2.addActionListener((ActionEvent event) -> System.out.println("Button2 Pressed e = [" + event + "]"));
 
         //方法体多行

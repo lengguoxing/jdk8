@@ -38,7 +38,7 @@ public class Test02MethodReference {
         List<Student> studentList = Arrays.asList(student1, student2, student3, student4);
         //studentList.sort((studentPara1, studentPara2) -> Student.compareStudentsByScore(studentPara1, studentPara2));//传统写法
         /*studentList.sort(Student::compareStudentsByScore);
-        studentList.forEach(student -> System.out.println("student = [" + student.getScore() + "]"));*/
+        studentList.forEach(student -> System.out.println("student = [" + student.getScore() + "]"));
 
         //b、引用名(对象名)::实例方法名
         /*studentList.sort(new StudentComparator()::compareStudentsByScore);

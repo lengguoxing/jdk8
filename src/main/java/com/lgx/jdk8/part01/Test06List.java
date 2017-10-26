@@ -29,7 +29,7 @@ public class Test06List {
 
         //以上的写法还不完全是JDK8的写法，更好的写法如下（采用流）：
         list.stream().map(item -> item.toUpperCase()).forEach(item -> System.out.println("item3 = [" + item + "]"));
-        //再变一下
+        //再变一下，加上方法引用
         list.stream().map(String::toUpperCase).forEach(item-> System.out.println("item4 = [" + item + "]"));
 
     }
