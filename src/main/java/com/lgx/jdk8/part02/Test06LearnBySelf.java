@@ -8,7 +8,7 @@ import java.util.function.*;
  */
 public class Test06LearnBySelf {
     public static void main(String[] args) {
-        /**Consumer:接受一个参数不返回值，functional method is accept(Object)**/
+        /**Consumer:接收一个参数不返回值，functional method is accept(Object)**/
         List<String> list = Arrays.asList("hello", "world");
         list.forEach(new Consumer<String>() {
             @Override
@@ -18,7 +18,7 @@ public class Test06LearnBySelf {
         });
         list.forEach(item -> System.out.println(item.toUpperCase()));
 
-        /**DoubleConsumer:接受一个Double参数不返回值，functional method is accept(Object)**/
+        /**DoubleConsumer:接收一个Double参数不返回值，functional method is accept(double)**/
         DoubleConsumer dc = (x) -> System.out.println(x*x);
         dc.accept(3.1415);
         List<Double> list2 = Arrays.asList(1.11, 2.22);
@@ -27,10 +27,10 @@ public class Test06LearnBySelf {
             public void accept(double value) {
 
             }
-        });*/ //一直报错？？？
+        });*/ //一直报错？？？原因，forEach方法接受的参数就是Consumer，DoubleConsumer不是Consumer的子类
         list2.forEach(item -> System.out.println(item));
 
-        /**BiConsumer:接受两个参数不返回值，functional method is accept(Object)**/
+        /**BiConsumer:接收两个参数不返回值，functional method is accept(Object, Object)**/
         Map<String, String> map = new HashMap<>();
         map.put("key1", "value1");
         map.put("key2", "value2");
@@ -44,27 +44,27 @@ public class Test06LearnBySelf {
 
         System.out.println("================================================================");
 
-        /**Function:接受一个参数返回一个值，functional method is apply(Object)**/
+        /**Function:接收一个参数返回一个值，functional method is apply(Object)**/
         Function<String, String> function = (s1) -> s1.toUpperCase();
         String result = function.apply("hello world");
         System.out.println("result = " + result);
 
-        /**IntFunction:接受一个Int参数返回一个Int值，functional method is apply(Object)**/
+        /**IntFunction:接收一个Int参数返回一个Int值，functional method is apply(int)**/
         IntFunction<Integer> intFunction = (int1) -> int1 * int1;
         int intResult = intFunction.apply(100);
         System.out.println("intResult = " + intResult);
 
-        /**DoubleToIntFunction:接受一个double参数返回一个int值，functional method is applyAsInt(Object)**/
+        /**DoubleToIntFunction:接收一个double参数返回一个int值，functional method is applyAsInt(Object)**/
         DoubleToIntFunction doubleToIntFunction = (d1) -> (int)d1+2;
         int doubleToIntResult = doubleToIntFunction.applyAsInt(3.1415926);
         System.out.println("doubleToIntResult = " + doubleToIntResult);
 
-        /**BiFunction:接受两个参数返回一个值，functional method is apply(Object)**/
+        /**BiFunction:接收两个参数返回一个值，functional method is apply(Object, Object)**/
         BiFunction<String, String, String> biFunction = (s1, s2) -> s1 + s2;
         String biResult = biFunction.apply("hello", "world");
         System.out.println("biResult = " + biResult);
 
-        /**BinaryOperator(二元运算符):接受两个参数返回一个值（参数和返回值类型是一致的），functional method is apply(Object)**/
+        /**BinaryOperator(二元运算符):接收两个参数返回一个值（参数和返回值类型是一致的），functional method is apply(Object, Object)**/
         BinaryOperator<Double> binaryOperator = (d1, d2) -> d1 + d2;
         double binaryResult = binaryOperator.apply(20.0, 30.0);
         System.out.println("binaryResult = " + binaryResult);
@@ -75,17 +75,17 @@ public class Test06LearnBySelf {
 
         System.out.println("================================================================");
 
-        /**Predicate:接受一个参数返回一个boolean值，functional method is test(Object)**/
+        /**Predicate:接收一个参数返回一个boolean值，functional method is test(Object)**/
         Predicate<String> predicate = (a) -> a == null;
         boolean predicateResult = predicate.test(new String());
         System.out.println("predicateResult = " + predicateResult);
 
-        /**Predicate:接受一个参数返回一个boolean值，functional method is test(Object)**/
+        /**DoublePredicate:接收一个参数返回一个boolean值，functional method is test(double)**/
         DoublePredicate doublePredicate = (d) -> d >= 10;
         boolean doublePredicateResult = doublePredicate.test(9.99999);
         System.out.println("doublePredicateResult = " + doublePredicateResult);
 
-        /**BiPredicate:接受两个参数返回一个boolean值，functional method is test(Object)**/
+        /**BiPredicate:接收两个参数返回一个boolean值，functional method is test(Object, Object)**/
         BiPredicate<Integer, Integer> biPredicate = (b1, b2) -> b1 > b2;
         boolean biPredicateResult = biPredicate.test(3, 2);
         System.out.println("biPredicateResult = " + biPredicateResult);
@@ -97,7 +97,7 @@ public class Test06LearnBySelf {
         String supplierResult = supplier.get();
         System.out.println("supplierResult = " + supplierResult);
 
-        /**DoubleSupplier:不接受参数返回一个Double值，functional method is getAsDouble(Object)**/
+        /**DoubleSupplier:不接受参数返回一个Double值，functional method is getAsDouble()**/
         DoubleSupplier doubleSupplier = () -> 1;
         double doubleSupplierResult = doubleSupplier.getAsDouble();
         System.out.println("doubleSupplierResult = " + doubleSupplierResult);

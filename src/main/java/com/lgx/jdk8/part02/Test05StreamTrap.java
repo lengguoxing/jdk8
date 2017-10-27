@@ -25,19 +25,19 @@ public class Test05StreamTrap {
 
         List<String> list4 = Arrays.asList("hello", "world", "hello world");
         //正常打印
-        //list4.stream().map(item -> item.substring(0, 1) + item.substring(1)).forEach(System.out::println);
+        //list4.stream().map(item -> item.substring(0, 1) + item.substring(2)).forEach(System.out::println);
         //啥都不打印，因为没有及早求值或者没有终止操作
         /*list4.stream().map(item ->{
-            String result = item.substring(0, 1) + item.substring(1);
+            String result = item.substring(0, 1) + item.substring(2);
             System.out.println("test-------");
             return result;
         });*/
         //依次打印一个test，再输出一个元素
-        list4.stream().map(item ->{
-            String result = item.substring(0, 1) + item.substring(1);
+        /*list4.stream().map(item ->{
+            String result = item.substring(0, 1) + item.substring(2);
             System.out.println("test-------");
             return result;
-        }).forEach(System.out::println);
+        }).forEach(System.out::println);*/
 
         //关于执行顺序
         //IntStream.iterate(0, i -> (i+1)%2).limit(10).distinct().forEach(System.out::println);//limit已经定义了个数，再去重，就不会无限循环

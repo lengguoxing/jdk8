@@ -24,9 +24,9 @@ public class Test04Stream {
         System.out.println("------------------------");
 
         //IntStream的使用
-        IntStream.of(new int[]{3,4,5,6,7}).forEach(System.out::print);
-        IntStream.range(3,8).forEach(System.out::print);
-        IntStream.rangeClosed(3,7).forEach(System.out::print);
+        IntStream.of(new int[]{3,4,5,6,7}).forEach(System.out::print);System.out.println();
+        IntStream.range(3,8).forEach(System.out::print);System.out.println();
+        IntStream.rangeClosed(3,7).forEach(System.out::print);System.out.println();
 
         System.out.println("------------------------");
 
@@ -50,8 +50,8 @@ public class Test04Stream {
         /*String[] strArray2 = streams.toArray(String[]::new);
         Arrays.asList(strArray2).forEach(System.out::println);*/
 
-        //用collect()另外方法来写
-       /* List<String> strList = streams.collect(() -> new ArrayList(), (theList, item) -> theList.add(item),
+        //用collect(),另外方法来写
+        /*List<String> strList = streams.collect(() -> new ArrayList(), (theList, item) -> theList.add(item),
                 (theList1, theList2) -> theList1.addAll(theList2));
         strList.forEach(System.out::println);*/
 
@@ -63,7 +63,7 @@ public class Test04Stream {
         /*List<String> strList3 = streams.collect(Collectors.toList());
         strList3.forEach(System.out::println);*/
 
-        //用collect()配合Collectors.toCollection来写,可以指定类型：如ArrayList
+        //用collect()配合Collectors.toCollection来写,可以指定类型：如ArrayList,LinkList等
         /*List<String> strList4 = streams.collect(Collectors.toCollection(ArrayList::new));
         strList4.forEach(System.out::println);*/
 
@@ -78,8 +78,12 @@ public class Test04Stream {
         System.out.println("set type = [" + set.getClass() + "]");*/
 
         //拼接
-        String str = streams.collect(Collectors.joining());
-        System.out.println("拼接str = [" + str + "]");
+        /*String str = streams.collect(Collectors.joining());
+        System.out.println("拼接str=" + str);*/
+        /*String str = streams.collect(Collectors.joining(", "));
+        System.out.println("拼接str2=" + str);*/
+        /*String str = streams.collect(Collectors.joining(", ", "[", "]"));
+        System.out.println("拼接str3=" + str);*/
 
         //过滤，将每个参数由小写变成大写，map函数就是映射，针对每一个元素
         List<String> list2 = Arrays.asList("hello", "world", "hello world");
@@ -91,13 +95,13 @@ public class Test04Stream {
 
         System.out.println("==========================");
 
-        //flatMap操作,扁平化map，会将里面的集合合并到一个集合
+        //flatMap操作,扁平化map，会将里面的集合元素,合并到一个集合
         Stream<List<Integer>> stream5 = Stream.of(Arrays.asList(1,2,3), Arrays.asList(13,14), Arrays.asList(25,26,27));
         stream5.flatMap(theList -> theList.stream()).map(item -> item * item).forEach(System.out::println);
 
         /**
          * generate方法使用
-         * findFirst之所以返回一个Optional,是因为避免NPE，空指针异常，因为可能一个都没找到
+         * findFirst之所以返回一个Optional,是因为避免NPE(空指针异常)，因为可能一个都没找到
          */
         Stream<String> stream6 = Stream.generate(UUID.randomUUID()::toString);
         stream6.findFirst().ifPresent(System.out::println);

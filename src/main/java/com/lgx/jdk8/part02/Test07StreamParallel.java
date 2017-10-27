@@ -7,7 +7,7 @@ import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 并行Stream和串行Stream的执行效率
+ * 串行Stream和并行(parallel)Stream的执行效率
  */
 public class Test07StreamParallel {
     public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class Test07StreamParallel {
 
         System.out.println("开始生成 = " + new Date());
         //生成500万个uuid
-        for (int i = 0; i< 5000000; i++){
+        for (int i = 0; i< size; i++){
             uuisList.add(UUID.randomUUID().toString());
         }
         System.out.println("生成结束 = " + new Date());
