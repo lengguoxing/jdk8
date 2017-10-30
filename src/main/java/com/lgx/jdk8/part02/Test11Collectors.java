@@ -33,8 +33,8 @@ public class Test11Collectors {
         System.out.println("summingInt = " + summingInt);
 
         //算出汇总信息
-        IntSummaryStatistics summarizingInt = userList.stream().collect(Collectors.summarizingInt(User::getScore));
-        System.out.println("summarizingInt = " + summarizingInt);
+        IntSummaryStatistics intSummaryStatistics = userList.stream().collect(Collectors.summarizingInt(User::getScore));
+        System.out.println("intSummaryStatistics = " + intSummaryStatistics);
 
         //拼接名字
         String nameStrs = userList.stream().map(User::getName).collect(Collectors.joining(", "));

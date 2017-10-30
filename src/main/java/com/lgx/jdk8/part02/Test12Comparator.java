@@ -23,9 +23,9 @@ public class Test12Comparator {
         System.out.println("list = " + list);*/
 
         //自定义排序器,Comparator写法
-        /*Collections.sort(list, Comparator.comparingInt(str -> str.length()));                     //升序
-        Collections.sort(list, Comparator.comparingInt(str -> str.length()).reversed());            //降序,会报错，因为编译器在这里无法推断str的类型为String，而是推断出事一个Objcet
-        Collections.sort(list, Comparator.comparingInt((String str) -> str.length()).reversed());   //降序,显示的指定一个类型*/
+        /*Collections.sort(list, Comparator.comparingInt(str -> str.length()));                       //升序
+        Collections.sort(list, Comparator.comparingInt(str -> str.length()).reversed());              //降序,会报错，因为编译器在这里无法推断str的类型为String，而是推断出事一个Objcet
+        Collections.sort(list, Comparator.comparingInt((String str) -> str.length()).reversed());*/   //降序,显示的指定一个类型
 
         //自定义排序器,Comparator写法2
         /*Collections.sort(list, Comparator.comparingInt(String::length));           //升序
